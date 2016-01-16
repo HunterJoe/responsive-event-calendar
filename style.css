@@ -1,0 +1,31 @@
+/*the basic setup to make out divs work like a table*/
+.tbl {
+	display: table;
+	min-height: 500px;
+	width: 100%;
+}
+.tbl_row {
+	display: table-row;
+}
+.tbl_col {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-top-width: 1px;
+	border-top-style: solid;
+	display: table-cell;
+}
+.tbl_row:last-child > .tbl_col:not(.empty) {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.tbl_row:last-child > .tbl_col:not(.empty):last-child {
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+/* colors */
+.tbl_col {
+	border-color: #000;
+}
+.tbl_col.empty {
+	border-color: #ccc;
+}
